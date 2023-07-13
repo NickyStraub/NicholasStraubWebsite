@@ -6,8 +6,8 @@
 }
 
 :root {
-  --color-primary: #191d2b;
-  --color-secondary: #27AE60;
+  --color-primary: #1d212e;
+  --color-secondary: #9b61f8;
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -108,7 +108,7 @@ section {
 }
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
-  transition: all 0.4 ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .controls .active-btn i {
   color: var(--color-white);
@@ -144,27 +144,44 @@ section {
 }
 .header-content .left-header .h-shape {
   transition: all 0.4s ease-in-out;
-  width: 65%;
+  width: 55%;
   height: 100%;
   background-color: var(--color-secondary);
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
-  -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
-          clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.header-content .left-header .h-shape .bg-img-con {
+  position: absolute;
+  left: -3%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background-color: var(--color-white);
+}
+.header-content .left-header .h-shape .bg-img-con img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
-  height: 90%;
-  width: 68%;
-  margin-left: 4rem;
-  background-color: var(--color-black);
+  height: 50%;
+  width: 40%;
+  margin-left: 43%;
+  background-color: var(--color-secondary);
   transition: all 0.4s ease-in-out;
 }
 .header-content .left-header .image img {
+  position: relative;
   width: 100%;
   height: 100%;
+  padding: 5%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.4s ease-in-out;
@@ -232,4 +249,28 @@ section {
   height: 100%;
   background-color: var(--color-secondary);
   transform: translateX(0);
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
 }/*# sourceMappingURL=styles.css.map */
